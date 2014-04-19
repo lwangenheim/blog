@@ -3,10 +3,10 @@
 %html{"ng-app"=> true}
 %head
   =stylesheet_link_tag "application", media: "all"
-  =javascript_include_tag "application"
+  =javascript_include_tag "application", controller_name
   =csrf_meta_tags
 
-%body{"ng-controller"=>"IndexCtrl"}
+%body
   =yield
 
 
