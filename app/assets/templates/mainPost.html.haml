@@ -1,3 +1,4 @@
-%h1.text-center {{ data.postId  }} - {{ data.post.title }}
+%h1.text-center
+  {{ data.postId  }} - {{ data.postData.posts[data.postId].title }}
 .row-fluid
-  %p {{ data.post.contents }}
+  %p {{ data.postData.posts[data.postId].contents }}
