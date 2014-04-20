@@ -1,4 +1,6 @@
 %h1.text-center My Blog
 .row-fluid{"ng-repeat" => "post in data.posts"}
-  %h2 {{ post.title }}
+  %h2 
+    %a{"ng-click" => "viewPost($index)"}
+      {{ post.title }}
   %p {{ post.contents }}
