@@ -1,0 +1,24 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    %a.brand{"ng-click" => "navHome()"}
+      My Blog
+    .ul.nav.pull-right
+      .li
+        %a{"ng-click" => "navNewPost()"}
+          New Post
+.container{"style" => "margin-top: 40px"}
+  %h1.text-center
+    Create New Post
+  %form
+    %fieldset
+      %label.strong
+        Title
+      %input.span12{"ng-model" => "formData.newPostTitle", "placeholder" => "New Post", type: "text", maxlength: "250"}
+      %label.strong
+        Body
+      %textarea.span12{"style" => "height: 250px", "ng-model" => "formData.newPostContents", "placeholder" => "Type your post here..."}
+      %button.btn.btn-primary{"ng-click" => "createPost()"}
+        Create
+      %button.btn.btn-danger.pull-right{"ng-click" => "clearPost()"}
+        Clear Post
+

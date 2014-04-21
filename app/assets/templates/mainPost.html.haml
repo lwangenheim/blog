@@ -1,4 +1,16 @@
-%h1.text-center
-  {{ data.postId  }} - {{ data.postData.posts[data.postId].title }}
-.row-fluid
-  %p {{ data.postData.posts[data.postId].contents }}
+.navbar.navbar-fixed-top
+  .navbar-inner
+    %a.brand{ href: '#'}
+      My Blog
+    .ul.nav.pull-right
+      .li
+        %a{"ng-click" => "navNewPost()"}
+          New Post
+.container{"style" => "margin-top: 40px"}
+  %h1.text-center
+    {{ data.currentPost.title  }}
+  .row-fluid
+    %p {{ data.currentPost.contents }}
+  .row-fluid
+    %button.btn.btn-default{"ng-click" => "editPost()"}
+      Edit

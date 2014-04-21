@@ -1,6 +1,15 @@
-%h1.text-center My Blog
-.row-fluid{"ng-repeat" => "post in data.posts"}
-  %h2 
-    %a{"ng-click" => "viewPost($index)"}
-      {{ post.title }}
-  %p {{ post.contents }}
+.navbar.navbar-fixed-top
+  .navbar-inner
+    %a.brand{ href: '#'}
+      My Blog
+    .ul.nav.pull-right
+      .li
+        %a{"ng-click" => "navNewPost()"}
+          New Post
+.container{"style" => "margin-top: 40px"}
+  %h1.text-center My Blog
+  .row-fluid{"ng-repeat" => "post in data.posts"}
+    %h2 
+      %a{"ng-click" => "viewPost(post.id)"}
+        {{ post.title }}
+    %p {{ post.contents }}
