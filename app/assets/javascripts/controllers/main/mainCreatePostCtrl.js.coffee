@@ -20,4 +20,4 @@
     $scope.formData.newPostTitle = ''
     $scope.formData.newPostContents = ''
 
-# @CreatePostCtrl.$inject = ['$scope', '$location', 'postData']
+@CreatePostCtrl.$inject = ['$scope', '$location', 'postData']

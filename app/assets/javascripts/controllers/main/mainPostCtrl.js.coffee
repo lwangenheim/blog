@@ -26,4 +26,4 @@
 
     postData.loadPosts(@deferred)
 
-# @PostCtrl.$inject = ['$scope', '$routeParams', '$location', '$q', 'postData']
+@PostCtrl.$inject = ['$scope', '$routeParams', '$location', '$q', 'postData']
