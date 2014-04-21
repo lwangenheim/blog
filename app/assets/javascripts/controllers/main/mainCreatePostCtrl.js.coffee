@@ -1,7 +1,7 @@
 @CreatePostCtrl = ($scope, $location, postData) ->
 
   $scope.data = postData.data
-  postData.loadPosts()
+  postData.loadPosts(null)
 
   $scope.formData = 
     newPostTitle: ''
@@ -20,4 +20,4 @@
     $scope.formData.newPostTitle = ''
     $scope.formData.newPostContents = ''
 
-@CreatePostCtrl.$inject = ['$scope', '$location', 'postData']
+# @CreatePostCtrl.$inject = ['$scope', '$location', 'postData']
