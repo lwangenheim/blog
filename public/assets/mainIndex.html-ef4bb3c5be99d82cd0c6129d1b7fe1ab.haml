@@ -1,0 +1,25 @@
+<div class='navbar navbar-fixed-top'>
+  <div class='navbar-inner'>
+    <a class='brand' href='#'>
+      My Blog
+    </a>
+    <div class='ul nav pull-right'>
+      <div class='li'>
+        <a ng-click='navNewPost()'>
+          New Post
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container' style='margin-top: 40px'>
+  <h1 class='text-center'>My Blog</h1>
+  <div class='row-fluid' ng-repeat='post in data.posts'>
+    <h2>
+      <a ng-click='viewPost(post.id)'>
+        {{ post.title }}
+      </a>
+    </h2>
+    <p>{{ post.contents }}</p>
+  </div>
+</div>

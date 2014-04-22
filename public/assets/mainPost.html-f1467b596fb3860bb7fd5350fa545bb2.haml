@@ -1,0 +1,27 @@
+<div class='navbar navbar-fixed-top'>
+  <div class='navbar-inner'>
+    <a class='brand' href='#'>
+      My Blog
+    </a>
+    <div class='ul nav pull-right'>
+      <div class='li'>
+        <a ng-click='navNewPost()'>
+          New Post
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container' style='margin-top: 40px'>
+  <h1 class='text-center'>
+    {{ data.currentPost.title  }}
+  </h1>
+  <div class='row-fluid'>
+    <p>{{ data.currentPost.contents }}</p>
+  </div>
+  <div class='row-fluid'>
+    <button class='btn btn-default' ng-click='editPost()'>
+      Edit
+    </button>
+  </div>
+</div>
