@@ -36,6 +36,10 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
